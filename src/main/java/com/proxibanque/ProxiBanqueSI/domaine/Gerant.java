@@ -1,20 +1,17 @@
 package com.proxibanque.ProxiBanqueSI.domaine;
 
-import javax.persistence.Embeddable;
+import javax.persistence.Entity;
 
 
-@Embeddable
+@Entity
 public class Gerant extends Personne {
 
-    private String login;
+
     private String password
 
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
+    public Gerant(String password) {
+        super(id, nom, prenom, adresse, codePostal, ville, telephone, email);
+        this.password = password;
     }
 
     public String getPassword() {
