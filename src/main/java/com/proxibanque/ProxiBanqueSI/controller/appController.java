@@ -4,19 +4,24 @@ import com.proxibanque.ProxiBanqueSI.domaine.Client;
 import com.proxibanque.ProxiBanqueSI.service.ClientService;
 import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-@SpringBootApplication
-@Transactional
+
 @Controller
+@RequestMapping("/")
+@ComponentScan(basePackages = {"com.proxibanque.ProxiBanqueSI.service"} )
 public class appController {
 
         @Autowired
         private ClientService clientService;
+
+        @RequestMapping({"/test"})
+        String test (){
+            return "test";
+        }
 
         @RequestMapping({"/", "/index"})
         public ModelAndView index (){
