@@ -7,11 +7,13 @@ import java.util.ArrayList;
 public class Conseiller extends Personne {
 
     private ArrayList listeClient;
+    private String login;
+    private String password
 
-
-    public Conseiller(String id, String nom, String prenom, String adresse, String codePostal, String ville, String telephone, String email, ArrayList listeClient) {
-        super(id, nom, prenom, adresse, codePostal, ville, telephone, email);
-        listeClient = listeClient;
+    public Conseiller(ArrayList listeClient, String login, String password) {
+        this.listeClient = listeClient;
+        this.login = login;
+        this.password = password;
     }
 
     public ArrayList getListeClient() {
@@ -20,6 +22,22 @@ public class Conseiller extends Personne {
 
     public void setListeClient(ArrayList listeClient) {
         this.listeClient = listeClient;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
 
