@@ -41,7 +41,7 @@
     <!-- Etape 2 : EntityManager -->
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="packagesToScan" value="com.objis.spring.demodomaine"/>
+        <property name="packagesToScan" value="com.proxibanque.ProxiBanqueSI.domaine"/>
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
                 <property name="database" value="MYSQL"/>
@@ -62,7 +62,7 @@
     </bean>
 
     <!-- Etape 4 : specifier ou sont les interfaces -->
-    <jpa:repositories base-package="com.objis.spring.demodao"/>
+    <jpa:repositories base-package="com.proxibanque.ProxiBanqueSI.DAO"/>
 
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -74,6 +74,6 @@
 
     <!-- Activation du scan du package controller pour analyse des classes annotées -->
     <context:component-scan
-            base-package="com.objis.spring.controller
-                            com.objis.spring.service" />
+            base-package="com.proxibanque.ProxiBanqueSI.controller
+                            com.proxibanque.ProxiBanqueSI.service" />
 </beans>

@@ -26,7 +26,7 @@ public class ProxiBanqueSiApplicationTests {
 	@Before
 	public void setUp() throws Exception {
 		personne = new Personne("13456", "testnom","testprenom", "8 cdcsdc", "1234", "ezeza","dsqdqs", "sqdsqd");
-		appContext = new ClassPathXmlApplicationContext("src/main/webapp/WEB-INF/application-servlet.xml");
+		appContext = new ClassPathXmlApplicationContext("classpath*:**/servlet.xml");
 		springDao = (IClientDao) appContext.getBean("IClientDao");
 	}
 
