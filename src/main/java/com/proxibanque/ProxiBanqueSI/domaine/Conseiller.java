@@ -1,25 +1,25 @@
 package com.proxibanque.ProxiBanqueSI.domaine;
 
-import javax.persistence.Entity;
+import javax.persistence.Embeddable;
 import java.util.ArrayList;
 
-@Entity
+@Embeddable
 public class Conseiller extends Personne {
 
-    private ArrayList ListeClient;
+    private ArrayList listeClient;
 
 
     public Conseiller(String id, String nom, String prenom, String adresse, String codePostal, String ville, String telephone, String email, ArrayList listeClient) {
         super(id, nom, prenom, adresse, codePostal, ville, telephone, email);
-        ListeClient = listeClient;
+        listeClient = listeClient;
     }
 
     public ArrayList getListeClient() {
-        return ListeClient;
+        return listeClient;
     }
 
     public void setListeClient(ArrayList listeClient) {
-        this.ListeClient = listeClient;
+        this.listeClient = listeClient;
     }
 }
 

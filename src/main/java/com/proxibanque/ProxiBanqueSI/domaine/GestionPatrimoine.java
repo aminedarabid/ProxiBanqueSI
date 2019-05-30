@@ -2,7 +2,7 @@ package com.proxibanque.ProxiBanqueSI.domaine;
 
 import javax.persistence.Entity;
 
-@Entity
+
 public class GestionPatrimoine {
 
     private double seuilPatrimoine;

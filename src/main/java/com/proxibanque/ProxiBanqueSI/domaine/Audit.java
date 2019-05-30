@@ -1,8 +1,8 @@
 package com.proxibanque.ProxiBanqueSI.domaine;
 
-import javax.persistence.Entity;
 
-@Entity
+
+
 public class Audit {
 
     private float plafondDecouvertEntreprise;

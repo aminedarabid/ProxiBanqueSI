@@ -1,8 +1,17 @@
 package com.proxibanque.ProxiBanqueSI.domaine;
 
+
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+
+
+@Entity
 public class Client extends Personne {
 
+    @ManyToOne
     private CompteEpargne cptEpargne;
+
+    @ManyToOne
     private CompteCourant cptCourant;
     private boolean fortune;
 
