@@ -2,6 +2,9 @@ package com.proxibanque.ProxiBanqueSI.domaine;
 
 import com.proxibanque.ProxiBanqueSI.DAO.ICompteBancaire;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Virement {
 
     private ICompteBancaire compteEmeteur;

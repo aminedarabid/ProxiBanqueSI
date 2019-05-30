@@ -10,7 +10,7 @@ public class Personne {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private int Id;
+    private String id;
     private String Nom;
     private String Prenom;
     private String Adresse;
@@ -19,23 +19,23 @@ public class Personne {
     private String Telephone;
     private String email;
 
-    public Personne(int id, String nom, String prenom, String adresse, String codePostal, String ville, String telephone, String email) {
-        Id = id;
-        Nom = nom;
-        Prenom = prenom;
-        Adresse = adresse;
-        CodePostal = codePostal;
-        Ville = ville;
-        Telephone = telephone;
+    public Personne(String id, String nom, String prenom, String adresse, String codePostal, String ville, String telephone, String email) {
+        this.id = id;
+        this.Nom = nom;
+        this.Prenom = prenom;
+        this.Adresse = adresse;
+        this.CodePostal = codePostal;
+        this.Ville = ville;
+        this.Telephone = telephone;
         this.email = email;
     }
 
-    public int getId() {
-        return Id;
+    public String getId() {
+        return id;
     }
 
-    public void setId(int id) {
-        Id = id;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNom() {

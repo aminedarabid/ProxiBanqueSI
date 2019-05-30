@@ -1,7 +1,9 @@
 package com.proxibanque.ProxiBanqueSI.domaine;
 
+import javax.persistence.Entity;
 import java.sql.Date;
 
+@Entity
 public abstract class CompteEpargne extends CompteBancaire {
 
     private double tauxRemuneration;

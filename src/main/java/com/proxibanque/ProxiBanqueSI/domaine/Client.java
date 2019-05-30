@@ -6,8 +6,8 @@ public class Client extends Personne {
     private CompteCourant cptCourant;
     private boolean fortune;
 
-    public Client(int Id, String nom, String prenom, String adresse, String codePostal, String ville, String telephone, String email, CompteEpargne cptEpargne, CompteCourant cptCourant, boolean fortune) {
-        super(Id, nom, prenom, adresse, codePostal, ville, telephone, email);
+    public Client(String  id, String nom, String prenom, String adresse, String codePostal, String ville, String telephone, String email, CompteEpargne cptEpargne, CompteCourant cptCourant, boolean fortune) {
+        super(id, nom, prenom, adresse, codePostal, ville, telephone, email);
         this.cptEpargne = cptEpargne;
         this.cptCourant = cptCourant;
         this.fortune = fortune;
